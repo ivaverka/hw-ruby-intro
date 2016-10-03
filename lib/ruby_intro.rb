@@ -2,8 +2,9 @@
 
 # Part 1
 
-def sum arr
-  # YOUR CODE HERE
+def sum(array)
+	result = array.inject(0){ |sum, x| sum + x }
+	return result
 end
 
 def max_2_sum arr
@@ -33,3 +34,8 @@ end
 class BookInStock
 # YOUR CODE HERE
 end
+
+# Using map (and one other method), 
+# create an array that lists the numbers 0 to -100 in descending order.
+# Without typing all the numbers manually, of course.
+
