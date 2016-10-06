@@ -7,8 +7,8 @@ def sum(array)
 	return result
 end
 
-def max_2_sum arr
-  # YOUR CODE HERE
+def max_2_sum(array)
+	array.empty? ? 0 : array.max(2).reduce(:+)
 end
 
 def sum_to_n? arr, n
@@ -35,7 +35,5 @@ class BookInStock
 # YOUR CODE HERE
 end
 
-# Using map (and one other method), 
-# create an array that lists the numbers 0 to -100 in descending order.
-# Without typing all the numbers manually, of course.
+
 
