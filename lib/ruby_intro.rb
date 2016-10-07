@@ -11,8 +11,9 @@ def max_2_sum(array)
 	array.empty? ? 0 : array.max(2).reduce(:+)
 end
 
-def sum_to_n? arr, n
-  # YOUR CODE HERE
+def sum_to_n?(arr, n)
+	return false if arr.size <= 1 && n.zero?
+  	arr.combination(2).any? { |x, y| x + y == n}
 end
 
 # Part 2
