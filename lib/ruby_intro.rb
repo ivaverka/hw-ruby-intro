@@ -40,8 +40,13 @@ end
 
 # Part 3
 
+# Define a class BookInStock 
+# which represents a book with an ISBN number, isbn, 
+# and price of the book as a floating-point number, price, as attributes.
 class BookInStock
-# YOUR CODE HERE
+	def initiaize(isbn, price)
+		@isbn, @price = isbn, price
+	end
 end
 
 
