@@ -22,18 +22,31 @@ def hello(name)
 	"Hello, " + name
 end
 
-def starts_with_consonant? s
-  # YOUR CODE HERE
+def starts_with_consonant?(s)
+	s =~ /^[^aioue\d\W]/i
+end
+  
+
+# Define a method binary_multiple_of_4?(s) 
+# that takes a string 
+# and returns true if the string represents a binary number that is a multiple of 4. 
+# NOTE: be sure it returns false if the string is not a valid binary number! 
+# Run associated tests via: $ rspec -e '#binary_multiple_of_4?' spec/part2_spec.rb
+
+def binary_multiple_of_4?(s)
+	s =~ /^[01]*00$/ || s =~ /^[0]+$/ ? true : false
 end
 
-def binary_multiple_of_4? s
-  # YOUR CODE HERE
-end
 
 # Part 3
 
+# Define a class BookInStock 
+# which represents a book with an ISBN number, isbn, 
+# and price of the book as a floating-point number, price, as attributes.
 class BookInStock
-# YOUR CODE HERE
+	def initiaize(isbn, price)
+		@isbn, @price = isbn, price
+	end
 end
 
 
