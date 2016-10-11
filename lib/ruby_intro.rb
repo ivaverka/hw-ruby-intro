@@ -44,9 +44,23 @@ end
 # which represents a book with an ISBN number, isbn, 
 # and price of the book as a floating-point number, price, as attributes.
 class BookInStock
-	def initiaize(isbn, price)
+
+	def initialize(isbn, price)
 		@isbn, @price = isbn, price
+		raise ArgumentError if isbn.empty? || price <= 0
 	end
+
+	attr_accessor :isbn, :price
+
+	def price_as_string
+		"$%.2f" % @price
+		#format("$%.2f", @price) -> his works too
+	end
+
+	# ^^If we want to display floating point numbers we need to use %f. 
+	# We can specify the number of decimal places we want like this: %0.2f.
+	# The 2 here indicates that we want to keep only two decimal places.
+
 end
 
 
